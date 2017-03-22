@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Get a string resource from your app's Resources
+        String hello = getResources().getString(R.string.hello_android);
+
+        TextView textView = new TextView(this);
+        textView.setText(R.string.hello_android);
     }
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
