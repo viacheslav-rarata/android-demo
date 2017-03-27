@@ -18,6 +18,7 @@ public abstract class AppiumInit {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         initCapabilities(capabilities);
         initDriver(capabilities);
+        initJenkins(capabilities);
         Helpers.init(driver);
     }
 
@@ -35,10 +36,16 @@ public abstract class AppiumInit {
         capabilities.setCapability("app", apkPath);
     }
 
+    private void initJenkins(final DesiredCapabilities capabilities) {
+        capabilities.setCapability("testobject_api_key", "9848-APK");
+        capabilities.setCapability("testobject_device", "Nexus_6_API_25");
+    }
+
     private void initDriver(final DesiredCapabilities capabilities) throws Exception{
         driver = new AndroidDriver(serverAddress(), capabilities);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
+
     private URL serverAddress(){
         try {
             return  new URL ("http://127.0.0.1:4723/wd/hub");
