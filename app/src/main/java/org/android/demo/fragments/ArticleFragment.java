@@ -27,7 +27,7 @@ import org.android.demo.R;
 public class ArticleFragment extends Fragment {
     final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
-    // second/**/ init example
+    // second init example
     TextView article;
 
     @Override
