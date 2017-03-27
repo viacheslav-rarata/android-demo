@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.File;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -28,12 +29,20 @@ public abstract class AppiumInit {
     }
 
     private void initCapabilities(final DesiredCapabilities capabilities){
-        String apkPath = System.getProperty("user.dir") + "/app-debug.apk";
+        String apkPath = getApkPath();
         capabilities.setCapability("appium-version", "1.1.0");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "Android");
         capabilities.setCapability("platformVersion", "7.1.1");
         capabilities.setCapability("app", apkPath);
+    }
+
+    private String getApkPath() {
+        String apkPath = System.getProperty("user.dir") + "/app/app-debug.apk";
+        if (!new File(apkPath).exists()) {
+            apkPath = System.getProperty("user.dir") + "/app-debug.apk";
+        }
+        return apkPath;
     }
 
     private void initJenkins(final DesiredCapabilities capabilities) {
