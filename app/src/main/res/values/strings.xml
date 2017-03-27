@@ -2,5 +2,6 @@
     <string name="app_name">android-demo</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="button_fragments">Navigate to Fragments</string>
     <string name="hello_android">Hello Android!</string>
 </resources>
