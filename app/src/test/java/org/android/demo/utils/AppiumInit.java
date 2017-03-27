@@ -28,7 +28,7 @@ public abstract class AppiumInit {
     }
 
     private void initCapabilities(final DesiredCapabilities capabilities){
-        final String apkPath = System.getProperty("user.dir") + "/app/app-debug.apk";
+        final String apkPath = System.getProperty("user.dir") + "/app-debug.apk";
         capabilities.setCapability("appium-version", "1.1.0");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "Android");
