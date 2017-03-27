@@ -62,4 +62,5 @@ public abstract class AppiumInit {
             throw new RuntimeException(e.getMessage());
         }
     }
+
 }
