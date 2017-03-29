@@ -21,7 +21,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import org.android.demo.R;
 
-public class MainActivity extends FragmentActivity 
+public class GeneralFragmentActivity extends FragmentActivity
         implements HeadlinesFragment.OnHeadlineSelectedListener {
 
     /** Called when the activity is first created. */

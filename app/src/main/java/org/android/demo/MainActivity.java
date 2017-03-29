@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.android.demo.fragments.GeneralFragmentActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "org.android.demo.MESSAGE";
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToFragment(View view) {
-        Intent intent = new Intent(this, org.android.demo.fragments.MainActivity.class);
+        Intent intent = new Intent(this, GeneralFragmentActivity.class);
         startActivity(intent);
     }
 }
