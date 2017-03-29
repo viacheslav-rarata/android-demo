@@ -1,6 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
+    apply plugin: 'java'
     repositories {
         jcenter()
     }
@@ -10,6 +10,10 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+    test {
+        reports.html.enabled = false
+//        reports.xml.enabled = true
+    }
 }
 
 allprojects {
@@ -18,6 +22,17 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
+/*task clean(type: Delete) {
     delete rootProject.buildDir
+}*/
+
+task hello {
+    doLast {
+        println 'tutorialspoint'
+    }
+}
+task count << {
+    (1+2).times {
+        print "$it "
+    }
 }
