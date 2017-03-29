@@ -55,3 +55,9 @@ dependencies {
     testCompile 'org.testobject:testobject-appium-java-api:0.0.26'
     testCompile 'com.google.code.gson:gson:2.6.2'
 }
+test {
+    reports {
+        junitXml.enabled = true
+        html.enabled = false
+    }
+}
