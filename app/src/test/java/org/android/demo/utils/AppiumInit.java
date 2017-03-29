@@ -32,7 +32,7 @@ public abstract class AppiumInit {
         String apkPath = getApkPath();
         capabilities.setCapability("appium-version", "1.1.0");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Android");
+        capabilities.setCapability("deviceName", "Android for tests");
         capabilities.setCapability("platformVersion", "7.1.1");
         capabilities.setCapability("app", apkPath);
     }
