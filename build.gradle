@@ -23,7 +23,7 @@ task testNG(type: Test) {
 }
 
 test {
-    reports.html.destination = file("$buildDir/reports/test")
+    reports.junitXml.destination = file("$buildDir/reports/test")
 
     dependsOn testNG
 }
