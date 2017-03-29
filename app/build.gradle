@@ -47,6 +47,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    testCompile 'org.testng:testng:6.5.1'
  /*   testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.53.0'
     testCompile group: 'commons-collections', name: 'commons-collections', version: '3.2.2'
     testCompile 'commons-beanutils:commons-beanutils:1.9.2'

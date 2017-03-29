@@ -10,10 +10,22 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
-    test {
-        reports.html.enabled = false
+    /*test {
+//        reports.html.enabled = false
 //        reports.xml.enabled = true
-    }
+        useTestNG()
+//        testng.testReportDir = file("$buildDir/reports/testng")
+    }*/
+}
+task testNG(type: Test) {
+    useTestNG {}
+    reports.html.destination = file("$buildDir/reports/testng")
+}
+
+test {
+    reports.html.destination = file("$buildDir/reports/test")
+
+    dependsOn testNG
 }
 
 allprojects {
